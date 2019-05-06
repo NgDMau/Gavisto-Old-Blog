@@ -8,6 +8,8 @@ comments: false
     
 <center><a href="http://ngdmau.github.io/"><b>Mau</b></a> one grizzly.</center>
 
+## Fullname: Nguyen Dinh Mau
+
 ## Features
 * Minimal, you can focus on your content
 * Responsive
