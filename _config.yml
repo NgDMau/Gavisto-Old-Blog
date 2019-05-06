@@ -4,7 +4,7 @@ bio:                'One grizzly.'
 description:        "Here I put everything."
 reading_time:       true
 words_per_minute:   200
-logo:               'assets/img/bwface.jpeg'
+logo:               'assets/img/bwface_ori.jpeg'
 background:         'assets/img/maichau_cover.jpg'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_US
