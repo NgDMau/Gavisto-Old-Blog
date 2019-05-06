@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <title>Summarize</title>
+
+    <link rel="stylesheet" href="home.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <script src="home.js"></script>
+    <script src="jquery-3.3.1.min.js"></script>
+</head>
+
+<!--Main Navigation-->
+
+
+<body>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between">
+            <a class="navbar-brand"> 
+                <img style="max-width:38px; align-content: center;" src="images/bwface1.jpeg" alt="NgDMau">
+                
+            </a>
+            <!-- Navbar content -->
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="https://ngdmau.github.io/" style="font-size: 20px;">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="#" style="font-size: 20px;">Blogs</a>
+                    <a class="nav-item nav-link" href="summarize.html" style="font-size: 20px;">Summarize</a>
+                    <a class="nav-item nav-link disabled" href="#" style="font-size: 20px;">Hidden</a>
+                </div>
+            </div>
+
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+    
+        </nav>
+    
+    
+    <div class="container">
+
+        <div class="row justify-content-center">
+            <div class="form-group">
+                <label>Enter the paragraph need summarizing below:</label>
+                <textarea class="form-control" id="textarea-input" rows="10" cols="100"></textarea>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <button id="button-summarize"  type="button" class="btn btn-lg btn-default" onclick="inputPara();">Summarize</button>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="form-group">
+                <label>The summarized paragraph will display below:</label>
+                <textarea class="form-control" id="textarea-output" rows="10" cols="100"></textarea>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</body>
+</html>
