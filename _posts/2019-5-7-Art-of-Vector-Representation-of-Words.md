@@ -49,4 +49,16 @@ Tuy nhiên một điều cần lưu ý là có những từ lặp lại với s�
 
 Từ đây chúng ta đã có bước đầu mang ngữ cảnh vào vector, một thông tin thú vị, tuy nhiên chưa thật sự tối ưu. Ví dụ từ "cat" và "dog" nằm ở các ngữ cảnh quá xa nhau (lớn hơn k) thì độ liên quan của chúng dĩ nhiên sẽ giảm bớt. Hơn nữa, ta vẫn chưa giảm được số chiều của một vector nên khối lượng tính toán vẫn rất nặng nề. 
 
-**Singular value Decomposition**
+**Singular Value Decomposition**
+Ở 2 phương pháp trên, ta thấy nhược điểm rất lớn của chúng là số chiều dữ liệu quá lớn gây khó khăn cho việc tính toán. SVD được ra đời để khắc phục yếu điểm đó. Cơ chế của SVD là phân tích một ma trận thành tích của nhiều ma trận đặc biệt.
+Giả sử ta có ma trận dữ liệu A với số chiều là m*n, khi đó A có thể được phân tích như sau:
+
+$\mathbf{A}_{m \times n} = \mathbf{U}_{m \times m}\mathbf{\Sigma}_{m \times n} (\mathbf{V}_{n \times n})^T$
+
+![_config.yml]({{ site.baseurl }}/images/svdmatrix.png)
+
+2 ma trận ở 2 bên là ma trận trực giao, ma trận ở giữa là ma trận đường chéo (chú ý rằng)
+
+
+
+**Tham khảo thêm tại [Machine Learning cơ bản](https://machinelearningcoban.com/2017/06/07/svd/)**
