@@ -53,12 +53,53 @@ Từ đây chúng ta đã có bước đầu mang ngữ cảnh vào vector, mộ
 Ở 2 phương pháp trên, ta thấy nhược điểm rất lớn của chúng là số chiều dữ liệu quá lớn gây khó khăn cho việc tính toán. SVD được ra đời để khắc phục yếu điểm đó. Cơ chế của SVD là phân tích một ma trận thành tích của nhiều ma trận đặc biệt.
 Giả sử ta có ma trận dữ liệu A với số chiều là m*n, khi đó A có thể được phân tích như sau:
 
-$\mathbf{A}_{m \times n} = \mathbf{U}_{m \times m}\mathbf{\Sigma}_{m \times n} (\mathbf{V}_{n \times n})^T$
-
 ![_config.yml]({{ site.baseurl }}/images/svdmatrix.png)
 
-2 ma trận ở 2 bên là ma trận trực giao, ma trận ở giữa là ma trận đường chéo (chú ý rằng)
-
-
+2 ma trận ở 2 bên là ma trận trực giao, ma trận ở giữa là ma trận đường chéo. Trong đó, theo thứ tự, **u1**, **v1**, **σ1** chứa những thông tin quan trọng nhất, rồi đến **u2**, **v2**, **σ2** và cứ thế đến **uk**, **vk**, **σk**. Vì vậy nếu muốn lấy **t** dữ liệu quan trọng, ta lấy từ **u1**, **v1**, **σ1** đến **ut**, **vt**, **σt**.
 
 **Tham khảo thêm tại [Machine Learning cơ bản](https://machinelearningcoban.com/2017/06/07/svd/)**
+
+Chúng ta có thể hình dung phương pháp SVD giống như việc dùng số bit để hiển thị màu. Thông thường một hệ 8-bit sẽ được sử dụng để mã hóa các màu sắc. Xét ảnh dưới đây:
+
+![_config.yml]({{ site.baseurl }}/images/color8bit.png)
+
+Nếu phải giảm số bit về 4 (thay vì 8) thì chúng ta sẽ giữ lại 4 bits nào? Một ý nghĩ hiện ra ngay, là ta giữ lại 4 bits cuối cùng, vì khi đó ta không cần phân biệt các màu theo độ đậm nhạt nữa. Xanh lá nhạt hay xanh lá đậm thì vẫn là màu xanh lá thôi!
+
+**Continuous Bag of Words (CBOW)**
+Các phương pháp vừa giới thiệu xong đều sử dụng thống kê cổ điển để tạo ra vector biểu diễn của từ, phương pháp CBOW này sử dụng cơ chế mới hoàn toàn. Xét bài toán sau: Từ một tập dữ liệu văn bản (corpus) cho trước, nếu được cho dãy gồm n-1 từ (các từ phải có trong tập dữ liệu trên), hãy dự đoán từ thứ n trong dãy?
+
+Đến đây chúng ta vẫn có một thắc mắc, rằng bài toán trên thì có liên quan gì đến việc tìm ra các vector biểu diễn từ ngữ nhỉ?
+Cứ bình tĩnh! Trước hết, chúng ta sẽ sử dụng một neural network cho bài toán kia đã:
+
+![_config.yml]({{ site.baseurl }}/images/neuralnet.png)
+
+   _Trong hình trên, đầu vào là một vector dạng one-hot của từ "sat", đầu ra là xác suất của các từ sẽ đứng sau nó_
+
+Thế thì liên quan gì đến các vector biểu diễn? Giờ hãy nhìn vào các phép toán bên trong neural network của chúng ta nhé: Tích **W**_context_***x** với **x** là một one-hot vector.
+
+![_config.yml]({{ site.baseurl }}/images/product.png)
+
+**P(on|sat)** tỉ lệ với dot product giữa cột thứ _j_ của **W**_context_ và cột thứ _i_ của **W**_word_. Từ đó, ta sẽ lấy cột thứ _i_ của **W**_word_ là vector biểu diễn của từ thứ _i_. Những tham số trong neural network mà ta cập nhật mỗi lần chính là vector biểu diễn của các từ trong tập dữ liệu.
+
+Các mô hình neural network kiểu này được gọi là feed-forward, cách học của chúng khá phổ biến nên mình sẽ không nhắc ở đây nữa. Các bạn có thể tham khảo thêm tại **[đây](https://towardsdatascience.com/deep-learning-feedforward-neural-network-26a6705dbdc7)**
+
+**Tham khảo thêm về CBOW tại [đây](https://www.kdnuggets.com/2018/04/implementing-deep-learning-methods-feature-engineering-text-data-cbow.html)**
+
+
+**Skip-Gram Model**
+Mô hình này có thể giải thích như là ngược lại của **CBOW**: Cho một tập dữ liệu văn bản, với mỗi từ cho trước, hãy dự đoán các từ có thể đi cùng nó (gọi là cùng context/ngữ cảnh)
+
+![_config.yml]({{ site.baseurl }}/images/skipgram.png)
+
+_Cho trước từ "on", mô hình cần dự đoán được các từ có thể đi cùng nó "he", "sat", "a", "chair"_
+
+Ta train một mạng neural để dự đoán một/nhiều từ xuất hiện dựa trên nhiều/một từ cho trước, nhưng sau đó ta không cần cái mạng neuron đó nữa mà chỉ lấy các tham số ở hidden layer. 
+
+**Tham khảo thêm về Skipgram tại [đây](https://www.kdnuggets.com/2018/04/implementing-deep-learning-methods-feature-engineering-text-data-skip-gram.html)**
+
+**GloVe Representations**
+
+
+
+
+
