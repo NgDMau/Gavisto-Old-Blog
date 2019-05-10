@@ -5,7 +5,7 @@ title: Art of Vector Representation of Words
 
 Việc sáng tạo ra các ngôn ngữ để diễn đạt tâm tư, ý nghĩ về một sự vật, sự việc nào đó là một bước đột phát lớn trong lịch sử loài người. Nó là tiền đề cho tiến hóa vượt bậc của nhân loại sau này. Tuy nhiên trên thực tế, dù đã trải qua hàng ngàn năm phát triển, vẫn có nhiều trường hợp các ngôn ngữ trở nên không rõ ràng, khó diễn đạt. Ta có ví dụ sau trong tiếng Anh:
 
-    _"Việt rất yêu bạn gái anh ấy, Nam cũng thế"._
+    "Việt rất yêu bạn gái anh ấy, Nam cũng thế."
 
 Rốt cuộc Nam yêu bạn gái mình hay bạn gái của Việt? Ở đây ta bắt gặp sự khó hiểu ở cách diễn đạt ngôn ngữ, ngay cả với trình độ của một người trưởng thành. Câu hỏi được đặt ra là làm sao để biểu diễn ngôn ngữ của con người ở một mức độ để máy tính có thể hiểu được?
 
@@ -18,7 +18,6 @@ Chúng ta đều biết ngôn ngữ của máy tính là những con số, trong
 **3. Phân tích giá trị suy biến (Singular Value Decomposition)**
 **4. Mô hình CBOW (Continous Big of Words)**
 **5. Mô hình Skip-gram (Skip-gram model)**
-**6. Biểu diễn Glove (Glove representations)**
 
 **One-hot representation**
 Cho trước một tập từ vựng gồm V từ, có thứ tự (V là số tự nhiên)/ Lấy ví dụ tập A = [human, machine, interface, if, computer, applications, opinion, system, learn, science, time] gồm 11 từ, khi đó từ "interface" sẽ được biểu diễn dưới dạng vector [0 0 1 0 0 0 0 0 0 0 0]. Một vector gồm V-1 giá trị 0 và chỉ giá trị 1 duy nhất tại vị trí tương ứng với vị trí của nó trong tập từ, rất đơn giản đúng không? Tuy nhiên cái đơn giản này lại dẫn đến sự phức tạp, khi mà tập từ vựng quá lớn thì mỗi vector dài bằng với độ dài của tập từ, việc này khiến cho quá trình tính toán tốn rất nhiều tài nguyên. Hơn nữa việc chỉ có một giá trị duy nhất khác 0 khiến cho sử dụng các hàm similarity trở nên khó khăn. Ta gần như không lấy được thông tin gì nếu chỉ dùng những vector dạng này.
@@ -45,6 +44,7 @@ Tuy nhiên một điều cần lưu ý là có những từ lặp lại với s�
 ![_config.yml]({{ site.baseurl }}/images/ppmi_cal.png)
 
 ![_config.yml]({{ site.baseurl }}/images/matrix_ppmi.png)
+
     _Ma trận mới sau khi sử dụng PPMI_
 
 Từ đây chúng ta đã có bước đầu mang ngữ cảnh vào vector, một thông tin thú vị, tuy nhiên chưa thật sự tối ưu. Ví dụ từ "cat" và "dog" nằm ở các ngữ cảnh quá xa nhau (lớn hơn k) thì độ liên quan của chúng dĩ nhiên sẽ giảm bớt. Hơn nữa, ta vẫn chưa giảm được số chiều của một vector nên khối lượng tính toán vẫn rất nặng nề. 
@@ -97,7 +97,10 @@ Ta train một mạng neural để dự đoán một/nhiều từ xuất hiện 
 
 **Tham khảo thêm về Skipgram tại [đây](https://www.kdnuggets.com/2018/04/implementing-deep-learning-methods-feature-engineering-text-data-skip-gram.html)**
 
-**GloVe Representations**
+**Chọn cái nào bây giờ?**
+Thực tế cho thấy các phương pháp hiện đại hơn như CBOW và Skip-gram thể hiện tốt hơn hẳn. Tuy nhiên khi so sánh 2 phương pháp này riêng với nhau thì có vẻ CBOW tỏ ra nhỉnh hơn trong đa số các task.
+
+
 
 
 
