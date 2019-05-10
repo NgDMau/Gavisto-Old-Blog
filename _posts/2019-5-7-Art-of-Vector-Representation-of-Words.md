@@ -28,13 +28,16 @@ Cho trước một tập từ vựng gồm V từ, có thứ tự (V là số t�
 Lấy ví dụ đoạn văn bản sau:
 
 _"Human machine interface for computer applications"_
+
 _"User opinion of computer system response time"_
+
 _"User interface management system"_
+
 _"System engineering for improved response time"_
 
 Ta có ma trận co-occurence như sau:
 
-![_config.yml]({{ site.baseurl }}/images/coocurence.png)
+![_config.yml]({{ site.baseurl }}/images/cooccurence.png)
 
 Từ "system" có mặt ở trong 2 ngữ cảnh (và 2 ngữ cảnh này cạnh nhau, nếu giữa chúng có 2 ngữ cảnh khác thì k = 3 và một trong 2 phải bị loại) với từ "user" nên giá trị tại [system][user] = [user][system] = 2. Mỗi hàng (hoặc cột) trong ma trận trên sẽ là vector tương ứng với mỗi từ đầu hàng hoặc đầu cột đó.
 Tuy nhiên một điều cần lưu ý là có những từ lặp lại với số lần không nhỏ nhưng mang ít ý nghĩa, ví dụ: for, of,... Từ đây ta lại sinh ra khái niệm Positive Pointwise Mutual Information (PPMI). PPMI sẽ giúp ta quan tâm đến việc một từ xuất hiện trong cùng một ngữ cảnh với từ khác có quá quan trọng hay không.
@@ -45,7 +48,6 @@ Tuy nhiên một điều cần lưu ý là có những từ lặp lại với s�
 
 ![_config.yml]({{ site.baseurl }}/images/matrix_ppmi.png)
 
-    _Ma trận mới sau khi sử dụng PPMI_
 
 Từ đây chúng ta đã có bước đầu mang ngữ cảnh vào vector, một thông tin thú vị, tuy nhiên chưa thật sự tối ưu. Ví dụ từ "cat" và "dog" nằm ở các ngữ cảnh quá xa nhau (lớn hơn k) thì độ liên quan của chúng dĩ nhiên sẽ giảm bớt. Hơn nữa, ta vẫn chưa giảm được số chiều của một vector nên khối lượng tính toán vẫn rất nặng nề. 
 
@@ -98,6 +100,7 @@ Ta train một mạng neural để dự đoán một/nhiều từ xuất hiện 
 **Tham khảo thêm về Skipgram tại [đây](https://www.kdnuggets.com/2018/04/implementing-deep-learning-methods-feature-engineering-text-data-skip-gram.html)**
 
 **Chọn cái nào bây giờ?**
+
 Thực tế cho thấy các phương pháp hiện đại hơn như CBOW và Skip-gram thể hiện tốt hơn hẳn. Tuy nhiên khi so sánh 2 phương pháp này riêng với nhau thì có vẻ CBOW tỏ ra nhỉnh hơn trong đa số các task.
 
 
