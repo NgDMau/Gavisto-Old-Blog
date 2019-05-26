@@ -37,7 +37,7 @@ _"System engineering for improved response time"_
 
 Ta có ma trận co-occurence như sau:
 
-![_config.yml]({{ site.baseurl }}/images/cooccurence.png)
+![_config.yml]({{ site.baseurl }}/images/cooccurence.pngs)
 
 Từ "system" có mặt ở trong 2 ngữ cảnh (và 2 ngữ cảnh này cạnh nhau, nếu giữa chúng có 2 ngữ cảnh khác thì k = 3 và một trong 2 phải bị loại) với từ "user" nên giá trị tại [system][user] = [user][system] = 2. Mỗi hàng (hoặc cột) trong ma trận trên sẽ là vector tương ứng với mỗi từ đầu hàng hoặc đầu cột đó.
 Tuy nhiên một điều cần lưu ý là có những từ lặp lại với số lần không nhỏ nhưng mang ít ý nghĩa, ví dụ: for, of,... Từ đây ta lại sinh ra khái niệm Positive Pointwise Mutual Information (PPMI). PPMI sẽ giúp ta quan tâm đến việc một từ xuất hiện trong cùng một ngữ cảnh với từ khác có quá quan trọng hay không.
