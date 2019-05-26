@@ -33,4 +33,4 @@ Tóm lại có thể nói các Container như những người con trong một n
 
 Số đông hiện nay nghĩ rằng Container hiệu quả hơn máy ảo. Nhưng cần phải nói là mục đích của từng công nghệ là khác nhau, với lợi ích, ưu nhược điểm của từng công nghệ. Nên nói Container hiệu quả hơn máy ảo là sai lầm. Tùy vào mục đích của dự án mà lựa chọn công nghệ phù hợp.
 
-**Tham khảo tại [đây](https://www.electronicdesign.com/dev-tools/what-s-difference-between-containers-and-virtual-machines) và [đây][http://robowonder.com/2018/08/docker-vs-vm-su-khac-nhau.html]**
+**Tham khảo tại [đây](https://www.electronicdesign.com/dev-tools/what-s-difference-between-containers-and-virtual-machines) và [đây](http://robowonder.com/2018/08/docker-vs-vm-su-khac-nhau.html)**
