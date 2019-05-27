@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Sự khác biệt giữa container và virtual machine
+title: Hệ điều hành Linux là gì?
 ---
 
 Từ điện thoại cho đến ô tô, các siêu máy tính hoặc đồ gia dụng điện tử, hệ điều hành Linux có mặt ở khắp nơi.
