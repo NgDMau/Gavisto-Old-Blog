@@ -36,62 +36,66 @@ Bây giờ mình sẽ hướng dẫn các bạn làm một ứng dụng có tên
 _Ảnh chụp màn hình của ứng dụng_
 
 Trước hết ta tạo một thư mục ở home tên là **whatis**. Trong thư mục đó ta có 1 file _setup.py_ và _setup.cfg_, ngoài ra lại có một thư mục con cũng tên **_whatis_**.  
-Ở trong _setup.py_, ta có:
+Ở trong _setup.py_, ta có:  
+```python
+try:
+    from setuptools import setup, find_packages
+except ImportError:
+    from distutils.core import setup, find_packages  
 
-`try:`
-    `from setuptools import setup, find_packages`
-`except ImportError:`
-    `from distutils.core import setup, find_packages`
-
-`setup(name='whatis',`
-      `version='0.0',`
-      `packages=find_packages(), #fix`
-      `description='Sequential model-based optimization toolbox.')`
-
+setup(name='whatis',
+      version='0.0',
+      packages=find_packages(), #fix
+      description='Sequential model-based optimization toolbox.')
+```  
 Bên trong _setup.cfg_ gồm metadata của ứng dụng:
 
-`[metadata]`
-`name = whatis`
-`version = 1.0.0`
-`author = Mau Dinh Nguyen`
+```md  
+[metadata]
+name = whatis
+version = 1.0.0
+author = Mau Dinh Nguyen
 
-`[options]`
-`packages = find:`
-`install_requires =`
-    `click`
-    `requests`
+[options]
+packages = find:
+install_requires =
+    click
+    requests
 
-`[options.entry_points]`
-`console_scripts =`
-    `whatis = whatis.app:main`
+[options.entry_points]
+console_scripts =
+    whatis = whatis.app:main
+```
 
 Ở dòng cuối cùng, khi chạy lệnh whatis trên terminal, hàm main trong file app.py ở thư mục whatis sẽ được chạy.
 
 Trong thư mục whatis con, ta tạo một file `__init__.py` và để trống. Sau đó tạo tiếp file _app.py_, bên trông như sau:
 
-`import click`
-`from .functions import whatis`
-`@click.command()`
-`@click.argument("acronyms")`
+```python
+import click
+from .functions import whatis
+@click.command()
+@click.argument("acronyms")
 
-`def main(acronyms:str):`
-    `whatis(acronyms)`
+def main(acronyms:str):
+    `whatis(acronyms)
 
-`if __name__ == '__main__':`
-    `main(acronyms)`
+if __name__ == '__main__':
+    main(acronyms)
+```
 
 Package **click** của python giúp ta định nghĩa argument và tạo hell, option một cách thuận tiện. Hàm chính hoạt động laf hàm main, nhưng nó lại gọi hàm whatis ở file [_functions.py_](https://github.com/NgDMau/whatis/blob/master/whatis/functions.py).
 
-Ta cần tải file dữ liệu nữa là hoàn thành, file (acronyms.txt)[https://github.com/NgDMau/whatis/blob/master/whatis/acronyms.txt]. Đặt file này bên trong thư mục _whatis_ con.
+Ta cần tải file dữ liệu nữa là hoàn thành, file [acronyms.txt](https://github.com/NgDMau/whatis/blob/master/whatis/acronyms.txt). Đặt file này bên trong thư mục _whatis_ con.
 
 Cuối cùng ta có cây dữ liệu như sau
 
 whatis  
 |_ whatis  
-   |_ __init__.py  
-   |_ app.py  
-   |_ functions.py 
-   |_ acronyms.txt 
+   |_ __init__.py   
+   |_ app.py   
+   |_ functions.py  
+   |_ acronyms.txt  
  _ setup.cfg  
  _ setup.py  
 
