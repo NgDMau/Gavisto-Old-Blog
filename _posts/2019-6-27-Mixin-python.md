@@ -78,4 +78,6 @@ I can swim
 Meow Meow
 Oack Oack Oack
 ```  
-Đó, để cho dễ nhìn thì những class được dùng để mixin ta nên thêm chữ Mixin ở cuối tên class cho dễ nhận ra.
+Đó, để cho dễ nhìn thì những class được dùng để mixin ta nên thêm chữ Mixin ở cuối tên class cho dễ nhận ra. Một lưu ý nho nhỏ là nếu mixin nhiều class mà trong đó có 2 hay nhiều class có tên method giống nhau, thì tên của class nào trong argument được khai báo trước, python sẽ lấy method của class đó trước.  
+Ví dụ **class CatMonkeyDog(catMixin, monkeyMixin, dogMixin)** thì thứ tự ưu tiên sẽ là CatMonkeyDog > catMixin > monkeyMixin > dogMixin. Nếu class **catMixin** và **monkeyMixin** đều có method **climb** thì method của **catMixin** sẽ được sử dụng.  
+Cảm ơn và chúc các bạn vui vẻ.  
