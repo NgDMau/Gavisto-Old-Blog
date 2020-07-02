@@ -2,13 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gavisto demo site by NgDMau</title>
-    <link>http://example.org/</link>
+    <link>http://gavisto.vn/</link>
     <description>Recent content on Gavisto demo site by NgDMau</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://gavisto.vn/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title></title>
+      <link>http://gavisto.vn/posts/my-second-post/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://gavisto.vn/posts/my-second-post/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://gavisto.vn/posts/my-third-post/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://gavisto.vn/posts/my-third-post/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

@@ -1,22 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Gavisto demo site</title>
-    <link>http://example.org/posts/</link>
-    <description>Recent content in Posts on Gavisto demo site</description>
+    <title>Posts on Gavisto demo site by NgDMau</title>
+    <link>http://gavisto.vn/posts/</link>
+    <description>Recent content in Posts on Gavisto demo site by NgDMau</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 02 Jul 2020 16:03:06 +0700</lastBuildDate>
     
-	<atom:link href="http://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://gavisto.vn/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>My First Post</title>
-      <link>http://example.org/posts/my-first-post/</link>
-      <pubDate>Thu, 02 Jul 2020 16:03:06 +0700</pubDate>
+      <title></title>
+      <link>http://gavisto.vn/posts/my-second-post/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/posts/my-first-post/</guid>
+      <guid>http://gavisto.vn/posts/my-second-post/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://gavisto.vn/posts/my-third-post/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://gavisto.vn/posts/my-third-post/</guid>
       <description></description>
     </item>
     
