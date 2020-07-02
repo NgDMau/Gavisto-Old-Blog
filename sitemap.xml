@@ -3,23 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://gavisto.vn/posts/my-second-post/</loc>
-  </url>
-  
-  <url>
-    <loc>http://gavisto.vn/posts/my-third-post/</loc>
-  </url>
-  
-  <url>
     <loc>http://gavisto.vn/categories/</loc>
   </url>
   
   <url>
     <loc>http://gavisto.vn/</loc>
-  </url>
-  
-  <url>
-    <loc>http://gavisto.vn/posts/</loc>
   </url>
   
   <url>
