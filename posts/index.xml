@@ -6,25 +6,53 @@
     <description>Recent content in Posts on Gavisto demo site by NgDMau</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Thu, 02 Jul 2020 16:03:06 +0700</lastBuildDate>
     
 	<atom:link href="http://gavisto.vn/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title></title>
+      <title>My First Post</title>
+      <link>http://gavisto.vn/posts/my-first-post/</link>
+      <pubDate>Thu, 02 Jul 2020 16:03:06 +0700</pubDate>
+      
+      <guid>http://gavisto.vn/posts/my-first-post/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>My Second Post</title>
       <link>http://gavisto.vn/posts/my-second-post/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 02 Jul 2020 16:03:06 +0700</pubDate>
       
       <guid>http://gavisto.vn/posts/my-second-post/</guid>
       <description></description>
     </item>
     
     <item>
-      <title></title>
+      <title>My Third Post</title>
       <link>http://gavisto.vn/posts/my-third-post/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 02 Jul 2020 16:03:06 +0700</pubDate>
       
       <guid>http://gavisto.vn/posts/my-third-post/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Người khiếm thị và cách mạng 4.0</title>
+      <link>http://gavisto.vn/posts/my-fourth-post/</link>
+      <pubDate>Thu, 02 Jul 2020 16:03:06 +0700</pubDate>
+      
+      <guid>http://gavisto.vn/posts/my-fourth-post/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Đại học Khoa học và Công nghệ Hà Nội</title>
+      <link>http://gavisto.vn/posts/my-fifth-post/</link>
+      <pubDate>Thu, 02 Jul 2020 16:03:06 +0700</pubDate>
+      
+      <guid>http://gavisto.vn/posts/my-fifth-post/</guid>
       <description></description>
     </item>
     
