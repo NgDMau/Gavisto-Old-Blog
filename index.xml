@@ -2,57 +2,57 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gavisto demo site by NgDMau</title>
-    <link>https://gavisto.vn/</link>
+    <link>gavisto.vn/</link>
     <description>Recent content on Gavisto demo site by NgDMau</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 02 Jul 2020 16:03:06 +0700</lastBuildDate>
     
-	<atom:link href="https://gavisto.vn/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="gavisto.vn/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>My First Post</title>
-      <link>https://gavisto.vn/posts/my-first-post/</link>
+      <link>gavisto.vn/posts/my-first-post/</link>
       <pubDate>Thu, 02 Jul 2020 16:03:06 +0700</pubDate>
       
-      <guid>https://gavisto.vn/posts/my-first-post/</guid>
+      <guid>gavisto.vn/posts/my-first-post/</guid>
       <description></description>
     </item>
     
     <item>
       <title>My Second Post</title>
-      <link>https://gavisto.vn/posts/my-second-post/</link>
+      <link>gavisto.vn/posts/my-second-post/</link>
       <pubDate>Thu, 02 Jul 2020 16:03:06 +0700</pubDate>
       
-      <guid>https://gavisto.vn/posts/my-second-post/</guid>
+      <guid>gavisto.vn/posts/my-second-post/</guid>
       <description></description>
     </item>
     
     <item>
       <title>My Third Post</title>
-      <link>https://gavisto.vn/posts/my-third-post/</link>
+      <link>gavisto.vn/posts/my-third-post/</link>
       <pubDate>Thu, 02 Jul 2020 16:03:06 +0700</pubDate>
       
-      <guid>https://gavisto.vn/posts/my-third-post/</guid>
+      <guid>gavisto.vn/posts/my-third-post/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Người khiếm thị và cách mạng 4.0</title>
-      <link>https://gavisto.vn/posts/my-fourth-post/</link>
+      <link>gavisto.vn/posts/my-fourth-post/</link>
       <pubDate>Thu, 02 Jul 2020 16:03:06 +0700</pubDate>
       
-      <guid>https://gavisto.vn/posts/my-fourth-post/</guid>
+      <guid>gavisto.vn/posts/my-fourth-post/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Đại học Khoa học và Công nghệ Hà Nội</title>
-      <link>https://gavisto.vn/posts/my-fifth-post/</link>
+      <link>gavisto.vn/posts/my-fifth-post/</link>
       <pubDate>Thu, 02 Jul 2020 16:03:06 +0700</pubDate>
       
-      <guid>https://gavisto.vn/posts/my-fifth-post/</guid>
+      <guid>gavisto.vn/posts/my-fifth-post/</guid>
       <description></description>
     </item>
     
