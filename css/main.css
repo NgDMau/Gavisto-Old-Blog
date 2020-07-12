@@ -3618,7 +3618,7 @@
 /* Main */
 
 	#main {
-		background-color: #2a2f4a;
+		background-color: #252222;
 	}
 
 		#main > * {
@@ -3653,6 +3653,7 @@
 /* Contact */
 
 	#contact {
+		background-color: #252222;
 		border-bottom: solid 1px rgba(212, 212, 255, 0.1);
 		overflow-x: hidden;
 	}
